@@ -1,10 +1,12 @@
 {% assign file_name= trmnl.plugin_settings.custom_fields_values.file_name %}
 {% assign parsed_json = files[file_name].content | parse_json %}
-{{ assign parsed_markdown = files[file_name].content | markdown_to_html }}
+{% assign parsed_markdown = files[file_name].content | markdown_to_html %}
 
 <div class="layout">
   <div class="content" data-content-limiter="true">
     {{ parsed_markdown }}
+    {{ parsed_json }}
+
   </div>
 </div>
 

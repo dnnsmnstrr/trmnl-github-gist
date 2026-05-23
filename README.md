@@ -2,6 +2,8 @@
 
 A [TRMNL](https://usetrmnl.com) plugin that fetches content from a GitHub Gist and renders it as markdown on an e-ink display.
 
+Template Gist: https://gist.github.com/dnnsmnstrr/77ce7da8d53013984f13cf5802a8b95a
+
 ## Setup
 
 ```bash
@@ -32,4 +34,4 @@ Pushes to `main` trigger CI: lint → push to TRMNL. Requires `TRMNL_API_KEY` in
 
 ## How it works
 
-A polling plugin that calls the [GitHub Gist API](https://api.github.com/gists/{gist_id}), parses the gist file's markdown content, and displays it on your TRMNL screen.
+A polling plugin that calls the [GitHub Gist API](https://docs.github.com/en/rest/gists/gists), parses the gist file's markdown content, and displays it on your TRMNL screen.

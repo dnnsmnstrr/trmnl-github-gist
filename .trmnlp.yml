@@ -8,8 +8,8 @@ watch:
 
 # values of custom fields (defined in src/settings.yml)
 custom_fields:
+  file_name: trmnl.md # change the file ending to .json to try out the json parsing
   gist_id: "{{ env.TRMNL_GIST_ID }}"
-  file_name: "{{ env.TRMNL_GIST_FILE_NAME }}"
   gist_token: "{{ env.TRMNL_GIST_TOKEN }}"
 
 # override variables
