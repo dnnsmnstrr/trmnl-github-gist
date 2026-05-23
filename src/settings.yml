@@ -21,5 +21,9 @@ custom_fields:
   field_type: password
   name: Gist API Token
   placeholder: github_pat_123...
+- keyname: image_url
+  field_type: string
+  name: Image URL
+  placeholder: https://www.svgrepo.com/show/361175/gist.svg
 name: GitHub Gist
 refresh_interval: 15

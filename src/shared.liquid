@@ -6,12 +6,11 @@
   <div class="content" data-content-limiter="true">
     {{ parsed_markdown }}
     {{ parsed_json }}
-
   </div>
 </div>
 
 <div class="title_bar">
-  <img class="image" alt="" src="https://www.svgrepo.com/show/361175/gist.svg">
+  <img class="image" alt="" src="{{ trmnl.plugin_settings.custom_fields_values.image_url }}">
   <span class="title">Gist</span>
   <span class="instance">{{ description | default: file_name }}</span>
 </div>

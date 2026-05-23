@@ -16,7 +16,6 @@ bin/trmnlp push --force # deploy to TRMNL (CI on main branch)
 | Var | Purpose |
 |---|---|
 | `TRMNL_GIST_ID` | Gist hex ID from the URL |
-| `TRMNL_GIST_FILE_NAME` | Filename inside the gist (e.g. `trmnl.md`) |
 | `TRMNL_GIST_TOKEN` | GitHub PAT with `gist` scope |
 
 `bin/trmnlp` auto-sources `.env` on every invocation.
@@ -25,7 +24,6 @@ bin/trmnlp push --force # deploy to TRMNL (CI on main branch)
 
 - **`src/settings.yml`** — plugin definition: polling URL, headers, custom fields, refresh interval
 - **`src/shared.liquid`** — fetches gist via `polling_url`, parses markdown with `markdown_to_html` filter
-- **`src/full.liquid`** — renders parsed markdown inside a layout container
 - **`.trmnlp.yml`** — TRMNLP tool config (watch paths, custom field variable bindings)
 
 Templates use Liquid + TRMNL-specific filters (`parse_json`, `markdown_to_html`).
