@@ -1,0 +1,25 @@
+---
+strategy: polling
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: ''
+polling_verb: get
+framework_version: 3.0.3
+serverless_language: ''
+polling_url: https://api.github.com/gists/{{ gist_id }}
+polling_headers: content-type=application/json&Authorization=Bearer {{gist_token}}
+polling_body: ''
+id: 283644
+custom_fields:
+- keyname: gist_id
+  field_type: string
+  name: Gist ID
+- keyname: file_name
+  field_type: string
+  name: File Name
+- keyname: gist_token
+  field_type: password
+  name: Gist API Token
+  placeholder: github_pat_123...
+name: GitHub Gist
+refresh_interval: 15

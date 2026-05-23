@@ -1,0 +1,15 @@
+{% assign file_name= trmnl.plugin_settings.custom_fields_values.file_name %}
+{% assign parsed_json = files[file_name].content | parse_json %}
+{{ assign parsed_markdown = files[file_name].content | markdown_to_html }}
+
+<div class="layout">
+  <div class="content" data-content-limiter="true">
+    {{ parsed_markdown }}
+  </div>
+</div>
+
+<div class="title_bar">
+  <img class="image" alt="" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Octicons-gist.svg">
+  <span class="title">Gist</span>
+  <span class="instance">{{ description | default: file_name }}</span>
+</div>
